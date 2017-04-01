@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test">
+	
+
+	<test name="test">
+		<classes>
+		<class name="pageLibrary.LoginPage"/>
+		<class name="testScripts.Login_test"/>
+		<class name="testBase.TestBase"></class>
+	
+		</classes>
+	</test>
+	
+
+
+ </suite>
+
