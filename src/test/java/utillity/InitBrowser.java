@@ -15,6 +15,9 @@ import config.Config;
 public class InitBrowser{
 	    static WebDriver driver;
 	    static Logger log = Logger.getLogger(InitBrowser.class.getName());
+	    /**
+	     * This Method returns The driver Specified in the Config.properties File
+	     * */
 		public static WebDriver getDriver(){
 			PropertyConfigurator.configure("log4j.properties");
 			Properties repo = Config.getRepo();
@@ -41,7 +44,6 @@ public class InitBrowser{
 		
 			return driver;
 			
-	
 	}
 	
 }

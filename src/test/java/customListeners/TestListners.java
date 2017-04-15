@@ -32,14 +32,11 @@ public class TestListners extends TestBase  implements ITestListener{
 	}
 
 	public void onTestFailure(ITestResult result) {
-		if(!result.isSuccess()){
-			String dir = System.getProperty("user.dir");
-			String customLocation = "F:\\EclipseProject\\Webdriver\\screenshots";
-			String imageFileName = customLocation+"failure"+result.getMethod()+"";
+			String imageFileName = "Failed"+result.getName()+".png";
 			File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			
 			try {
-				FileUtils.copyFile(src,new File("imageFileName"));
+				FileUtils.copyFile(src,new File("F:\\EclipseProject\\com.webdriver.automationpractice\\src\\test\\java\\screenshots\\"+imageFileName));
 				
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -48,7 +45,7 @@ public class TestListners extends TestBase  implements ITestListener{
 			//Reporter.log("To view screenshot on this link:" + "<a href=\" "+imageFileName+" \"> screenshot <img src= \" file:\\imageFileName" \" />");
 			
 			
-		}
+		
 		
 	}
 

@@ -2,11 +2,16 @@ package testScripts;
 
 
 
+import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pageLibrary.LoginPage;
@@ -24,6 +29,9 @@ public class Login_test extends TestBase{
 	LoginPage LoginPage = PageFactory.initElements(driver, LoginPage.class);
 	log.info("Signing In");
 	LoginPage.logIn("username@mail.com", "asdghj");
+	Assert.assertEquals(false, true);
+	//File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	//FileUtils.copyFile(src, new File("F:\\EclipseProject\\com.webdriver.automationpractice\\src\\test\\java\\screenshots\\screenshot.png"));
 	}
 
 }
