@@ -13,7 +13,7 @@ import java.util.Properties;
 	    public static Properties getRepo(){
 		
 	    Properties pro = new Properties();
-		File src = new File("F:\\EclipseProject\\selenium\\src\\test\\java\\config\\config.properties");
+		File src = new File("src/test/java/config/config.properties");
 		FileInputStream fi;
 		try {
 			fi = new FileInputStream(src);
